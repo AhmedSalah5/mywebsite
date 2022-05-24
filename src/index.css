@@ -1,6 +1,6 @@
 :root{
   --color1:#85bbf1;
-
+  --color2:rgb(11, 47, 59);
 
   --facebook:#1877f2;
   --github: #fff;
@@ -58,7 +58,7 @@ a,a:hover{
   height: 70px;
   width: 100%;
   padding: 0 30px;
-  background-color: rgb(11, 47, 59);
+  background-color: var(--color2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -198,13 +198,14 @@ a,a:hover{
 }
 /*portfolio-item*/
 .portfolio-item{
-  height: 200px;
+  height: 250px;
   box-shadow: 0 0 10px #666;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
 .portfolio-item .info{
+  text-align: center;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -213,6 +214,9 @@ a,a:hover{
   flex-direction: column;
   top: 80%;
   transition: all 0.3s;
+  background-color:  var(--color2);
+  color: #fff;
+  direction: rtl;
 }
 .portfolio-item .info h3{
   padding-top: 5px;
@@ -226,4 +230,26 @@ a,a:hover{
 }
 .portfolio-item .info div{
   padding: 10px;
+}
+
+.portfolio-item .info a{
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.portfolio-item .info a:hover{
+  background-color: #fff;
+  color: var(--color2);
+}
+.portfolio-item .info div{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
