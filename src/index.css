@@ -53,6 +53,27 @@ code {
 a,a:hover{
   text-decoration: none;
 }
+.main-btn{
+  min-width: 160px;
+  text-align: center;
+  background-color: var(--color2);
+  color: #fff;
+  padding: 8px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid var(--color2);
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 16px;
+}
+.main-btn:hover{
+  background-color: #fff;
+  color: var(--color2);
+}
+.main-title{
+  margin-bottom: 20px;
+  color: var(--color2);
+}
 /*Navbar Style*/
 .navbar{
   height: 70px;
@@ -63,6 +84,10 @@ a,a:hover{
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 10px #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
 }
 .logo{
   font-size: 14px;
@@ -83,11 +108,61 @@ a,a:hover{
 .top-links a:hover{
   color: #fff;
 }
-
+.toggler{
+  width: 35px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  cursor: pointer;
+  display: none;
+}
+.toggler div{
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.toggler div:nth-child(2){
+  width: 75%;
+}
+.toggler div:nth-child(3){
+  width: 50%;
+}
+.toggler:hover div:nth-child(2),
+.toggler:hover div:nth-child(3){
+  width: 100%;
+}
+@media(max-width:767px){
+  .top-links{
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 47, 59,0.9);
+    z-index: 100;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.4s;
+  }
+  .top-links a{
+    display: block;
+    width: 150px;
+    margin:0 auto 10px;
+    padding: 10px;
+    background-color: var(--color2);
+  }
+  .top-links.opened{
+    right: 0;
+  }
+  .toggler{display: flex;}
+}
 /*pages*/
 .home,.about,.portfolio,.contact{
-  min-height: calc(100vh - 70px);
-  padding-top: 20px;
+  min-height: 100vh;
+  padding: 90px 0;
 }
 /*Home*/
 
@@ -188,14 +263,14 @@ a,a:hover{
 }
 @media(max-width:767px){
   .portfolio .items{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:  1fr;
   }
 }
-@media(max-width:470px){
+/* @media(max-width:470px){
   .portfolio .items{
-    grid-template-columns: 1fr;
+    
   }
-}
+} */
 /*portfolio-item*/
 .portfolio-item{
   height: 250px;
@@ -252,4 +327,112 @@ a,a:hover{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+/*About*/
+.about .content{
+  width: 100%;
+  display: flex;
+
+}
+.about h1{
+  color: var(--color2);
+}
+.about .content .text,.about .content .image{
+  flex: 1;
+}
+/* .about .content .image img{
+  background-image: url('../public/images/home-bg.jpg');
+  background-size: cover;
+  height: 80vh;
+} */
+.about .content .image img{
+  width: 100%;
+}
+.skills-div{
+  padding: 15px 0;
+  margin-top: 15px;
+}
+.skills{
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+.skills-div h2{
+  margin-bottom: 10px;
+  color: var(--color2);
+}
+.skills span{
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #666;
+  margin: 5px;
+  color: #fff;
+  border-radius: 5px;
+}
+.about .grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+@media (max-width:767px){
+  .about .content{
+    flex-direction: column;
+  }
+}
+
+/*contact*/
+.contact{
+  position: relative;
+}
+.contact::before{
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url('../public/images/home-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
+.contact form{
+  width: 500px;
+  max-width: 90%;
+  padding: 15px;
+  box-shadow: 0 0 10px var(--color2);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+@media (max-width:767px){
+  .contact form{
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+.contact form .form-group{
+  margin-bottom: 15px;
+}
+.contact form label,.contact form input, .contact form textarea{
+  display: block;
+  width: 100%;
+}
+.contact form label{
+  margin-bottom: 5px;
+  color: var(--color2);
+  font-size: 16px;
+  font-weight: bold;
+}
+.contact form input, .contact form textarea{
+  padding: 8px 5px;
+  border-radius: 5px;
+  border: 1px solid #e3e3e3;
+}
+.contact form input:focus, .contact form textarea:focus{
+  outline: none;
+  border-color: var(--color2);
 }
