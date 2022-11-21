@@ -6,20 +6,20 @@
         "url":"https://food-app-sepia.vercel.app"
     },
     {
-        "title":"متجر بسيط باستخدام React (Next js)",
-        "description":"موقع لعرض منتجات باستخدام Next js وMaterial UI",
+        "title":"React (Next js) E-Commerce",
+        "description":"Next js & Material UI products website",
         "image":"images/works/StoreDev.png",
         "url":"https://storedev-ahmedsalah5.vercel.app/"
     },
     {
-        "title":"موقع معرض أثاث",
-        "description":"موقع متجاوب باستخدام HTML & CSS &JavaScript لمعرض أثاث ويصلح لجميع الأغراض",
+        "title":"Furniture Website",
+        "description":"Simple website using HTML & CSS & JavaScript",
         "image":"https://mostaql.hsoubcdn.com/uploads/thumbnails/403741/6129f5ac788cc/Sofa0.png",
         "url":"https://sofach.netlify.app/"
     },
     {
-        "title":"موقع متجاوب بدون اطار عمل",
-        "description":"موقع متجاوب من صفحة واحدة يصلح لجميع الاغراض تم تصميمه باستخدام html5 , css3 , JavaScript ولم يتم استخدام أي اطار عمل لجعله متجاوب بل تم الاعتماد في التجاوب بشكل اساسي على خصائص media في css3 الموقع به امكانية تغيير الالوان وبعض الامكانيات الاخرى",
+        "title":"Responsive Website pure css",
+        "description":"Responsive website using html5 , css3 , JavaScript",
         "image":"images/works/img4.png",
         "url":"https://folio5.netlify.app/"
     }
