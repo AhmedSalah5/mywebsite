@@ -163,15 +163,18 @@ a,a:hover{
 .home,.about,.portfolio,.contact{
   min-height: 100vh;
   padding: 90px 0;
+  overflow-y: auto;
 }
 /*Home*/
 
 .home{
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(0,0,0,0.5);
   color: #d1d1d1;
   position: relative;
+  padding: 90px 0;
 }
 .home .logo{
   position: absolute;
