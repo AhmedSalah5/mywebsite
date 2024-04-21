@@ -242,6 +242,7 @@ a,a:hover{
 @media(max-width:768px){
   .home .text{
     padding-top: 60px;
+    width: 80%;
   }
   .home .text h1{
     font-size: 20px;
